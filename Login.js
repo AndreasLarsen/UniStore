@@ -5,6 +5,8 @@ $(".append").val($(".append").val() + '@wustl.edu');
 
 $( ".append" ).append( "<p>@wustl.edu</p>" );
 
+
+
 function cambiar_login() {
   document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
 document.querySelector('.cont_form_login').style.display = "block";
