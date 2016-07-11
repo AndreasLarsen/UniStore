@@ -1,4 +1,4 @@
-<script type="text/javascript" src="Login.js"></script>
+
 
 
 $('#append@wustl.edu').val($('#append@wustl.edu').val() + 'hey');
@@ -43,6 +43,9 @@ document.querySelector('.cont_form_login').style.display = "none";
 },500);  
   
   }
+  
+
+
 
 
 
