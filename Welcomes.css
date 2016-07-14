@@ -1,0 +1,195 @@
+body {
+  background-color: black;
+  font-family: 'Myriad Pro', sans-serif; }
+
+
+.Continue {
+  opacity: 0;
+  position: absolute;
+  z-index: 15;
+  text-align: center;
+  margin: 0px 0 0 -335px;
+  width: 650px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  font-size: 48px;
+  font-weight: 70;
+  animation: on .6s ease-in-out 3.7s forwards; }
+  .Continue .splash_logo {
+    font-size: 100px; }
+  .Continue p {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: type 3s steps(60, end) 1s; }
+  .Continue p:nth-child(2) {
+    animation: type2 .5s steps(60, end) 3.7s; }
+  .Continue button {
+    position: center;
+    border: 0;
+    opacity: 0;
+    background: #191919;
+    color: white;
+    border: 1px solid #191919;
+    letter-spacing: 2px;
+    padding: .5rem 2.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+    animation: on .6s ease-in-out 4s forwards; }
+    .Continue button:hover {
+      background: white;
+      color: #191919;
+      border: 1px solid #191919; }
+
+.text {
+  opacity: 0;
+  position: absolute;
+  z-index: 15;
+  text-align: left;
+  margin: -100px 0 0 -280px;
+  width: 650px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  font-size: 48px;
+  font-weight: 70;
+  animation: on .6s ease-in-out 3.7s forwards; }
+  .text .splash_logo {
+    font-size: 100px; }
+  .text p {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: type 3s steps(60, end) 1s; }
+  .text p:nth-child(2) {
+    animation: type2 .5s steps(60, end) 3.7s; }
+  .text button {
+    position: center;
+    border: 0;
+    opacity: 0;
+    background: #191919;
+    color: white;
+    border: 1px solid #191919;
+    letter-spacing: 2px;
+    padding: .5rem 2.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+    animation: on .6s ease-in-out 4s forwards; }
+    .text button:hover {
+      background: white;
+      color: #191919;
+      border: 1px solid #191919; }
+
+.splash {
+  width: 2000vw;
+  height: 2000vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden; }
+  .splash_logo {
+    position: absolute;
+    margin: -25px 0 0 -25px;
+    top: 45vh;
+    z-index: 5;
+    left: 48vw;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    opacity: 1;
+    will-change: opacity;
+    animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards; }
+    .splash_logo:before {
+      display: none;
+      position: absolute;
+      left: 150px;
+      bottom: -5px;
+      width: 0px;
+      height: 1px;
+      background-color: black;
+      content: ""; }
+    .splash_logo:after {
+      display: block;
+      position: absolute;
+      left: 150px;
+      top: -5px;
+      width: 0px;
+      height: 1px;
+      background-color: black;
+      content: "";
+      will-change: width; }
+  .splash_svg {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0; }
+    .splash_svg svg {
+      width: 100%;
+      height: 100%; }
+      .splash_svg svg rect {
+        width: 100%;
+        height: 100%;
+        fill: white;  // changes the after color of the background
+        stroke: 0; }
+  .splash_minimize {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4; }
+    .splash_minimize svg {
+      width: 100%;
+      height: 100%; }
+      .splash_minimize svg rect {
+        width: 100%;
+        height: 100%;
+        animation: scale 2s ease-out forwards 1s, hide 1.3s ease-out forwards 1.2s; }
+
+@keyframes hide {
+  100% {
+    fill: transparent; } }
+@keyframes off {
+  100% {
+    opacity: 0; } }
+@keyframes on {
+  100% {
+    opacity: 1; } }
+@keyframes logo {
+  100% {
+    color: black; } }  //Changes the color of WUSTL STORE after 
+@keyframes type {
+  0% {
+    width: 0; } }
+@keyframes type2 {
+  0% {
+    width: 0; }
+  50% {
+    width: 0; }
+  100% {
+    width: 100; } }
+@keyframes expand {
+  25% {
+    fill: white; }
+  50% {
+    fill: white; }
+  100% {
+    fill: white; } }
+
+/*# sourceMappingURL=Welcomes.css.map */
