@@ -48,15 +48,16 @@ box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
   position: absolute;
   overflow: hidden;
   top:100px;
-left: 0px;
-  width: 320px;
+  left: px;
+  /* margin: auto auto auto auto; */
+  width: 640px;
   height: 280px;
   background-color: #eee;
--webkit-transition: all 0.5s;
--moz-transition: all 0.5s;
--ms-transition: all 0.5s;
--o-transition: all 0.5s;
-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .cont_forms_active_login {
@@ -338,6 +339,7 @@ text-align: left;
 }
 
 .cont_form_login > h2 {
+
 margin-top: 110px; 
 font-weight: 400;
   color: #757575;
@@ -349,3 +351,15 @@ font-weight: 400;
     margin: 10px;
 margin-left: 30px;
 }
+
+.cont_form_login {
+  padding-left: 160px;
+}
+.cont_form_sign_up {
+  padding-left: 160px;
+}
+/*
+.spread {
+  width:;
+}
+*/
