@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-<link rel="stylesheet" type="text/css" href="Login.css">
-<script src="Login.js"></script>
+
 
 <div id="fb-root"></div>
 
@@ -19,7 +15,7 @@
 <div class="cont_ba_opcitiy">
     <h2>LOGIN</h2>  
  <p> </p> 
-  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  <button class="btn_login" ng-click="cambiar_login()">LOGIN</button>
   </div>
   </div>
 <div class="col_md_sign_up">
@@ -30,7 +26,7 @@
   
   <p></p>
 
-  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+  <button class="btn_sign_up" ng-click="cambiar_sign_up()">SIGN UP</button>
 </div>
   </div>
        </div>
@@ -47,17 +43,17 @@
        <img src="https://s2.graphiq.com/sites/default/files/5307/media/images/Washington_University_in_St_Louis_5686901_i0.jpg" alt="" />
        </div>
  <div class="cont_form_login">
-<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+<a href="#" ng-click="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
 
    <h2>Log In</h2>
  <input class= "append" type="text" placeholder="WUSTL ID" />
 
 <input id= "dreson" type="password" placeholder="Password" />
-<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+<button class="btn_login" ng-click="cambiar_login()">LOGIN</button>
   </div>
   
    <div class="cont_form_sign_up">
-<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+<a href="#" ng-click="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
      <h2>SIGN UP</h2>
      
 <input class= "append" type="text" placeholder="WUSTL Email" />
@@ -75,6 +71,3 @@
  </div>
 </div>
 
-</head>
-
-</html>
