@@ -17,7 +17,6 @@
     $onInit() {
       this.$http.get('/api/items')
         .then(response => {
-          debugger
           this.awesomeThings = response.data;
           this.socket.syncUpdates('thing', this.awesomeThings);
         });
