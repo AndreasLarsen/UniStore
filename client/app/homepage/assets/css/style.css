@@ -23,20 +23,22 @@
 body { 
 	background: black; 
 	margin: 0; 
-	color: red;
+	color: white;
+
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+h1, h2, h3, h4, h5, h6{
     font-family: 'Lato', sans-serif;
 	font-weight: 300;
-}
-
-#h h2{
-	color:white;
-	font-weight:300;
-	font-size: 16px; 
 
 }
+
+
+
+
+
+
 
 #log{
 	position: absolute;
