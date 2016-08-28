@@ -12,6 +12,4 @@ angular.module('uniStoreApp')
 		})
 	}
 
-
-
 });
