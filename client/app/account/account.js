@@ -24,6 +24,12 @@ angular.module('uniStoreApp')
         controller: 'SignupController',
         controllerAs: 'vm'
       })
+      .state('addItem', {
+        url: '/addItem',
+        templateUrl: 'app/addItem/addItem.html',
+        controller: 'addItemController',
+        controllerAs: 'vm'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
