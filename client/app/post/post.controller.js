@@ -3,7 +3,7 @@
 angular.module('uniStoreApp')
 .controller('postController', function ($scope) {
 	$scope.item = {};
-	
+
 	$scope.a = function() {
 		alert("Hello");
 	}
