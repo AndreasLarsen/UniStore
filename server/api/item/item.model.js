@@ -3,7 +3,7 @@
 import mongoose from 'mongoose';
 
 var ItemSchema = new mongoose.Schema({
-  _id: String,
+  // _id: String,
   name: String,
   seller: String,
   description: String,
