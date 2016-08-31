@@ -2,10 +2,7 @@
 
 angular.module('uniStoreApp')
 .controller('postController', function ($scope, $http) {
-	var newItem = {name: $scope.name,
-								description: $scope.description,
-								image: $scope.image
-		};
+
 
 
 
@@ -13,6 +10,10 @@ angular.module('uniStoreApp')
 		alert("Hello");
 	}
 	$scope.save = function() {
+		var newItem = {name: $scope.name,
+				description: $scope.description,
+				image: $scope.image
+		};
 		$http.post('/api/items/', newItem, function(err, something) {
 			//Make more elegant pop up
 			debugger
