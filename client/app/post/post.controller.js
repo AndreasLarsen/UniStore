@@ -25,7 +25,7 @@ angular.module('uniStoreApp')
 		$scope.name ='';
 		$scope.description ='';
 		$scope.image ='';
-		
+
 
 	}
 

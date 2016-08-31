@@ -8,4 +8,6 @@ angular.module('uniStoreApp')
         controller: 'postController',
         controllerAs: 'vm'
       })
+
+
   });
