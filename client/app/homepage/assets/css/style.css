@@ -1,7 +1,39 @@
+<<<<<<< HEAD
 html, body {
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
+=======
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: Landing Sumo - Theme 20
+ * URL: http://LandingSumo.com
+ * Version: 1.0
+ * Exclusive Freebie for BlackTie.co
+ */
+
+/*	################################################################
+	1. GENERAL STRUCTURES
+################################################################# */
+
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+
+
+* { 
+	margin: 0;
+	padding: 0px;
+    font-family: 'Lato', sans-serif;
+} 
+body { 
+	background: black; 
+	margin: 0; 
+	color: white;
+
+>>>>>>> 50e8c39bf9c1d3242e5231a21e2aa8a0468ea998
 }
 
 .main-container {
