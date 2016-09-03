@@ -1,10 +1,9 @@
 'use strict';
 
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+import mongoose from 'mongoose';
 
-var ItemSchema = new Schema({
-  _id: String,
+var ItemSchema = new mongoose.Schema({
+  // _id: String,
   name: String,
   seller: String,
   description: String,
@@ -12,4 +11,5 @@ var ItemSchema = new Schema({
   image: String,
 });
 
-module.exports = mongoose.model('Item', ItemSchema, 'items');
+
+export default mongoose.model('Item', ItemSchema, 'items');

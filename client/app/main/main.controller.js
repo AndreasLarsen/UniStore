@@ -7,7 +7,7 @@
     constructor($http, $scope, socket) {
       this.$http = $http;
       this.socket = socket;
-      this.awesomeThings = [];
+      this.items = [];
 
       $scope.$on('$destroy', function() {
         socket.unsyncUpdates('thing');
@@ -17,9 +17,8 @@
     $onInit() {
       this.$http.get('/api/items')
         .then(response => {
-          debugger
-          this.awesomeThings = response.data;
-          this.socket.syncUpdates('thing', this.awesomeThings);
+          this.items = response.data;
+          this.socket.syncUpdates('item', this.items);
         });
     }
 
