@@ -3,7 +3,6 @@
 angular.module('uniStoreApp')
 .controller('postController', function ($scope, $http) {
 
-
 	$scope.showForm = true;
 
 	$scope.a = function() {
