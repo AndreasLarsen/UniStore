@@ -1,9 +1,12 @@
+<div ng-show="isLoggedIn">
 	<form name ="itemForm" ng-submit="save()" ng-show="showForm">
     Name: <input type="text" ng-model="name" /><br />
     Description: <input type="text" ng-model="description" /><br />
     Image Link : <input type="text" ng-model="image" /><br />
     <button type="submit" class="btn btn-primary" ng-click="showForm = !showForm">Submit</button>
   </form>
+</div>
+<h3 ng-hide="isLoggedIn">You must be logged in to post </h3>
 	<br />
 	<br />
 	<h3 class="text-center" ng-hide="showForm">Your item has been posted!</h1>

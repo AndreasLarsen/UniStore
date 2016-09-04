@@ -1,8 +1,9 @@
 'use strict'
 
 angular.module('uniStoreApp')
-.controller('postController', function ($scope, $http) {
-
+.controller('postController', function ($scope, $http, Auth) {
+	$scope.isLoggedIn = Auth.isLoggedIn();
+	console.log($scope.isLoggedIn);
 	$scope.showForm = true;
 
 	$scope.a = function() {

@@ -68,6 +68,7 @@ export function index(req, res) {
 
 // Gets a single Item from the DB
 export function show(req, res) {
+  debugger;
   return Item.findById(req.params.id).exec()
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
