@@ -8,16 +8,17 @@ html, body {
 .main-container {
 	height:100%;
 	width:100%;
-	background-size: 100% 100%;
+	background-size: cover;
+	background-position: absolute;
+    background-repeat:no-repeat;
 	margin-top: 0%;
 }
-
-
-
 
 #hamburger {
   display: none;
 }
+
+
 
 .menu {
 	display: block;
