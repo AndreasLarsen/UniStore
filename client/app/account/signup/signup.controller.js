@@ -6,14 +6,18 @@ class SignupController {
   constructor(Auth, $state) {
       this.Auth = Auth;
       this.$state = $state;
+      this.emailMatch = false;
     }
     //start-non-standard
-
-
+  toggle() {
+    emailMatch = !emailMatch;
+    console.log("Hello");
+  }
   register(form) {
     this.submitted = true;
-
-    if (form.$valid) {
+    var emailRe = new RegExp("@wustl.edu");
+    debugger;
+    if (this.user.email.match(emailRe) && form.$valid) {
       this.Auth.createUser({
           name: this.user.name,
           email: this.user.email,
@@ -33,7 +37,9 @@ class SignupController {
             this.errors[field] = error.message;
           });
         });
-    }
+    } else {
+      this.emailMatch = true;
+    } 
   }
 }
 

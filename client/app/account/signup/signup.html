@@ -27,6 +27,9 @@
           <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
             Doesn't look like a valid email.
           </p>
+          <p class="help-block" ng-show="vm.emailMatch && vm.submitted">
+            You need a WUSTL email to join University Store
+          </p>
           <p class="help-block" ng-show="form.email.$error.required && vm.submitted">
             What's your email address?
           </p>
