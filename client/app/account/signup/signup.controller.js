@@ -15,7 +15,7 @@ class SignupController {
   }
   register(form) {
     this.submitted = true;
-    var emailRe = new RegExp("@wustl.edu");
+    var emailRe = new RegExp("\w+@wustl.edu");
     debugger;
     if (this.user.email.match(emailRe) && form.$valid) {
       this.Auth.createUser({
@@ -30,7 +30,6 @@ class SignupController {
         .catch(err => {
           err = err.data;
           this.errors = {};
-
           // Update validity of form fields that match the mongoose errors
           angular.forEach(err.errors, (error, field) => {
             form[field].$setValidity('mongoose', false);
