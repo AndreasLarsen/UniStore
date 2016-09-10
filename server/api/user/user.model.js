@@ -4,6 +4,7 @@ import crypto from 'crypto';
 import mongoose from 'mongoose';
 mongoose.Promise = require('bluebird');
 import {Schema} from 'mongoose';
+var http = require('http');
 
 var UserSchema = new Schema({
   name: String,
@@ -21,7 +22,8 @@ var UserSchema = new Schema({
     required: true
   },
   provider: String,
-  salt: String
+  salt: String,
+  activated: Boolean
 });
 
 /**
@@ -126,6 +128,52 @@ UserSchema
  */
 UserSchema.methods = {
   /**
+   * Find - returns user object
+   * @param {String} login - the email which the user logs in with
+   * @param {Function} callback
+   * @return {User Object}
+   */
+  find(login, callback) {
+    return this.constructor.findOne({ email: login}).exec();
+  }, 
+  /**
+   * activate - returns user object
+   * @param {String} id 
+   * @param {Function} callback
+   * @return {Boolean}
+   */
+  activate(id, callback) {
+    var user = this.constructor.findOne({ email: login});
+    user.activated == true;
+    user.save();
+    if (callback) {
+      if (err) {
+        return callback(err);
+      }
+      return callback(true);
+    } else {
+      return true;
+    }
+  },
+  /**
+   * setPassword - change userPassword
+   * @param {String} id 
+   * @param {Function} callback
+   * @return {Boolean}
+   */
+  setPassword(id, password, callback) {
+    var changeURL = '/' + id + '/password';
+    return User.findById(userId).exec()
+    .then(user => {
+      user.password = newPass;
+      return user.save()
+        .then(() => {
+          res.status(204).end();
+        })
+        .catch(validationError(res));
+    });
+  },
+  /**
    * Authenticate - check if the passwords are the same
    *
    * @param {String} password
@@ -150,6 +198,7 @@ UserSchema.methods = {
       }
     });
   },
+
 
   /**
    * Make salt

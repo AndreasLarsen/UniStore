@@ -4,7 +4,19 @@ import User from './user.model';
 import passport from 'passport';
 import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
+var activator = require('activator');
 
+export function activate(req, res) {
+  // var config = req.data.config;
+
+  debugger;
+  window.location.pathname.split('/');
+  var activateConfig = {
+    user:User, from:"wuniversitystore@gmail.com", templates:"/misc/emailActivation.html"
+  }
+  activator.init(config);
+  activator.createActivate();
+}
 function validationError(res, statusCode) {
   statusCode = statusCode || 422;
   return function(err) {
@@ -24,6 +36,7 @@ function handleError(res, statusCode) {
  * restriction: 'admin'
  */
 export function index(req, res) {
+  debugger;
   return User.find({}, '-salt -password').exec()
     .then(users => {
       res.status(200).json(users);
@@ -35,6 +48,7 @@ export function index(req, res) {
  * Creates a new user
  */
 export function create(req, res, next) {
+  debugger
   var newUser = new User(req.body);
   newUser.provider = 'local';
   newUser.role = 'user';
@@ -63,6 +77,19 @@ export function show(req, res, next) {
     })
     .catch(err => next(err));
 }
+
+
+// /**
+//  * Activates a user's account
+//  *
+//  */
+// export function activate(req, res) {
+//   var userId = req.params.id;
+//   User.findOne(userId).exec()
+//   .then(user.activated = true;)
+//   .catch(handleError(res));
+// }
+
 
 /**
  * Deletes a user
