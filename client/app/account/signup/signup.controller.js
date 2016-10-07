@@ -11,12 +11,10 @@ class SignupController {
     //start-non-standard
   toggle() {
     emailMatch = !emailMatch;
-    console.log("Hello");
   }
   register(form) {
     this.submitted = true;
-    var emailRe = new RegExp("\w+@wustl.edu");
-    debugger;
+    var emailRe = /[\w\.]+@wustl.edu$/;
     if (this.user.email.match(emailRe) && form.$valid) {
       this.Auth.createUser({
           name: this.user.name,
@@ -38,7 +36,7 @@ class SignupController {
         });
     } else {
       this.emailMatch = true;
-    } 
+    }
   }
 }
 
